@@ -4,9 +4,10 @@ import styles from "./TextBox.module.scss";
 
 type TextBoxProps = {
   text: string;
+  className: string;
 };
 
-function TextBox({ text }: TextBoxProps) {
+function TextBox({ text, className }: TextBoxProps) {
   const [textPrinted, setTextPrinted] = useState("");
 
   useEffect(() => {
@@ -24,7 +25,7 @@ function TextBox({ text }: TextBoxProps) {
   }, [textPrinted]);
 
   return (
-    <div className={styles.wrapper}>
+    <div className={`${styles.wrapper} ${className}`}>
       <p>
         <strong>Iroh: </strong>
         {textPrinted} <span className={styles.tick} />

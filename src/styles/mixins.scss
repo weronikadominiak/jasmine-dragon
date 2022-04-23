@@ -1,0 +1,13 @@
+@mixin alignCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin baseCard {
+  padding: 24px;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background-color: #fff;
+}
