@@ -18,7 +18,7 @@ function TextBox({ text }: TextBoxProps) {
     if (text.length !== textPrinted.length) {
       timer = setTimeout(() => {
         setTextPrinted(textPrinted + text.charAt(textPrinted.length));
-      }, 100);
+      }, 70);
     }
     return () => clearTimeout(timer);
   }, [textPrinted]);

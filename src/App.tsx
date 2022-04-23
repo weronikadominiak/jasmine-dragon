@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 
 import Button from "./components/Button/Button";
-import logo from "./logo.svg";
+import Logo from "./logo.svg";
 
 import "./App.css";
 import TextBox from "./components/TextBox/TextBox";
+import Iroh from "./components/Iroh/Iroh";
 
 const ADVICE_LIST = [
   "I think you should do it!",
@@ -34,10 +35,14 @@ const QUOTES_LIST = [
 ];
 
 function App() {
-  const [advice, setAdvice] = useState("");
+  const [advice, setAdvice] = useState(
+    "Welcome to the Jasmine Dragon. How can I help you?"
+  );
+  const [speak, setSpeak] = useState(true);
 
   const getAdvice = (list: Array<string>) => {
     const randomIndex = getRandomInt(list.length - 1);
+    setSpeak(false);
     setAdvice(list[randomIndex]);
   };
 
@@ -46,13 +51,17 @@ function App() {
   };
 
   useEffect(() => {
-    console.log(advice);
+    setSpeak(true);
+
+    setTimeout(() => {
+      setSpeak(false);
+    }, 10000);
   }, [advice]);
 
   return (
     <div className="App">
       <header className="App-header">
-        <p>Welcome to the Jasmine Dragon!</p>
+        <h1>Jasmine Dragon</h1>
         <div className="buttons">
           <Button
             text="Ask for advice!"
@@ -60,7 +69,8 @@ function App() {
           />
           <Button text="Listen" onClick={() => getAdvice(QUOTES_LIST)} />
         </div>
-        <img src={logo} className="App-logo" alt="logo" />
+        <Iroh speak={speak} />
+
         <TextBox text={advice} />
       </header>
     </div>
