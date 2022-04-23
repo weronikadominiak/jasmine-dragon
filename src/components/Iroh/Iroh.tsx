@@ -1,6 +1,6 @@
 import styles from "./Iroh.module.scss";
 
-function Iroh({ speak }) {
+function Iroh({ speak }: { speak: boolean }) {
   return (
     <div className={styles.wrapper}>
       <svg
@@ -9,10 +9,10 @@ function Iroh({ speak }) {
         viewBox="0 0 238 258"
         version="1.1"
         style={{
-          "fill-rule": "evenodd",
-          "clip-rule": "evenodd",
-          "stroke-linejoin": "round",
-          "stroke-miterlimit": 2,
+          fillRule: "evenodd",
+          clipRule: "evenodd",
+          strokeLinejoin: "round",
+          strokeMiterlimit: 2,
         }}
       >
         <g transform="matrix(1,0,0,1,-281.127,-79.0678)">
