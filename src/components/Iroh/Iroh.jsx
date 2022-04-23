@@ -1,6 +1,6 @@
 import styles from "./Iroh.module.scss";
 
-function Iroh({ speak }: { speak: boolean }) {
+function Iroh({ speak }) {
   return (
     <div className={styles.wrapper}>
       <svg

@@ -1,6 +1,6 @@
 type ButtonProps = {
-  type: "button" | "submit" | "reset" | undefined;
-  className: string;
+  type?: "button" | "submit" | "reset" | undefined;
+  className?: string;
   text: string;
   onClick?: any; // TODO
   disabled?: boolean;
