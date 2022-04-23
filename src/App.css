@@ -9,7 +9,8 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    /* animation: App-logo-spin infinite 20s linear; */
+    margin: 2rem;
   }
 }
 
@@ -39,4 +40,17 @@
 
 button {
   font-size: calc(10px + 2vmin);
+  padding: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 0;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  padding: 1rem;
 }

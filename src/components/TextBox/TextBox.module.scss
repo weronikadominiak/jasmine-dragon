@@ -1,0 +1,32 @@
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+.wrapper {
+  font-family: "Anonymous Pro", monospace;
+  color: #282c34;
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  width: 500px;
+  height: 100px;
+  font-size: 16px;
+  text-align: left;
+  margin: 1rem;
+}
+
+.tick {
+  background: #282c34;
+  width: 10px;
+  height: 2px;
+  display: inline-block;
+  animation: tick infinite 0.6s;
+  margin-left: -4px;
+}
+
+@keyframes tick {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
