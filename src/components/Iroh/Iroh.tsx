@@ -118,6 +118,27 @@ function Iroh({ speak, className }: IrohProps) {
                 style={{ fill: "rgb(245, 185, 108)" }}
               />
             </g>
+            <g
+              xmlns="http://www.w3.org/2000/svg"
+              transform="matrix(2,0,0,2e-06,-257.061,175.5)"
+              className={styles.blinkLeft}
+            >
+              <path
+                d="M454.631,201.76L426.049,201.76C426.049,194.048 432.452,187.786 440.34,187.786C448.228,187.786 454.631,194.048 454.631,201.76Z"
+                style={{ fill: "rgb(245, 185, 108)" }}
+              />
+            </g>
+
+            <g
+              xmlns="http://www.w3.org/2000/svg"
+              transform="matrix(1.38156, 0, 0, 2e-6, -159.658, 175.5)"
+              className={styles.blinkRight}
+            >
+              <path
+                d="M454.631,201.76L426.049,201.76C426.049,194.048 432.452,187.786 440.34,187.786C448.228,187.786 454.631,194.048 454.631,201.76Z"
+                style={{ fill: "rgb(245, 185, 108)" }}
+              />
+            </g>
           </g>
           <g id="Ears">
             <g id="Ear" transform="matrix(1,0,0,1,-6.625,1)">

@@ -10,6 +10,14 @@
   }
 }
 
+.blinkLeft {
+  animation: blink-left 4s infinite ease-in-out;
+}
+
+.blinkRight {
+  animation: blink-right 4s infinite ease-in-out;
+}
+
 .mouth {
   animation: speak 0.6s 6 ease-in-out alternate-reverse;
 }
@@ -29,5 +37,41 @@
 
   100% {
     transform: translate(8px);
+  }
+}
+
+// Position of the eyelids
+$left-open: 1.38156, 0, 0, 2e-6, -257.061, 175.5;
+$left-closed: 1.38156, 0, 0, 1.6722, -257.061, -138.516;
+$right-open: 1.38156, 0, 0, 2e-6, -159.658, 175.5;
+$right-closed: 1.38156, 0, 0, 1.6722, -159.658, -138.516;
+
+@keyframes blink-left {
+  0% {
+    transform: matrix($left-open);
+  }
+
+  10% {
+    transform: matrix($left-closed);
+  }
+
+  20%,
+  100% {
+    transform: matrix($left-open);
+  }
+}
+
+@keyframes blink-right {
+  0% {
+    transform: matrix($right-open);
+  }
+
+  10% {
+    transform: matrix($right-closed);
+  }
+
+  20%,
+  100% {
+    transform: matrix($right-open);
   }
 }
