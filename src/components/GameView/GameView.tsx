@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 import TextBox from "../TextBox/TextBox";
 import Iroh from "../Iroh/Iroh";
+import IrohPixi from "../IrohPixi/IrohPixiWrapper.js";
 import Sidebar from "../Sidebar/Sidebar";
 
 import styles from "./GameView.module.scss";
@@ -26,7 +27,10 @@ function GameView() {
         setSpeak={setSpeak}
         className={styles.sidebar}
       />
-      <Iroh speak={speak} className={styles.main} />
+      {/* <Iroh speak={speak} className={styles.main} /> */}
+      <div className={`${styles.main} ${styles.temporary}`}>
+        <IrohPixi />
+      </div>
       <TextBox text={advice} className={styles.text} />
     </section>
   );

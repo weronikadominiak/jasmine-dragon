@@ -17,3 +17,12 @@
 .sidebar {
   grid-area: 1 / 4 / 5 / 5;
 }
+
+// TODO
+
+@import "../../styles/mixins.scss";
+
+.temporary {
+  @include alignCenter;
+  @include baseCard;
+}
