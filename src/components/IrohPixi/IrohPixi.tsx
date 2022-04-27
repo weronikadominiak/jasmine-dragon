@@ -2,12 +2,7 @@ import { useEffect } from "react";
 import { useApp } from "@inlet/react-pixi";
 import { Spine } from "pixi-spine";
 
-// TODO
-type IrohPixiProps = {
-  speak: boolean;
-};
-
-function IrohPixi({ speak }: IrohPixiProps) {
+function IrohPixi() {
   const app = useApp();
   const spineLoaderOptions = { metadata: { spineSkeletonScale: 1 } };
 
@@ -22,7 +17,7 @@ function IrohPixi({ speak }: IrohPixiProps) {
     app.stage.buttonMode = true;
   }, []);
 
-  function onAssetsLoaded(loader, res) {
+  function onAssetsLoaded(loader: any, res: any) {
     const iroh = new Spine(res.iroh.spineData);
 
     // set the position
