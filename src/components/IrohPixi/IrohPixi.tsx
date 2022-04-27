@@ -27,7 +27,7 @@ function IrohPixi() {
     iroh.scale.set(1);
 
     iroh.state.setAnimation(1, "head", true);
-    iroh.state.setAnimation(2, "smile", false);
+    iroh.state.setAnimation(2, "smile", true);
 
     // play animation
     iroh.state.setAnimation(0, "idle", true);
